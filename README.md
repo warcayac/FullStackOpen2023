@@ -67,14 +67,53 @@ $ cd courseinfo2
 $ bun install
 $ bunx --bun vite
 ```
-The `--bun` flag tells *Bun* to run Vite's CLI using bun instead of *node*. To simplify this command, update the *"dev"* script in *package.json* (see [reference](https://bun.sh/guides/ecosystem/vite)).
+> The `--bun` flag tells *Bun* to run Vite's CLI using bun instead of *node*. To simplify this command, update the *"dev"* script in *package.json* (see [reference](https://bun.sh/guides/ecosystem/vite)).
 
----
-## Part 2
+Creating two apps for exercises:
 ```
 $ bunx create-vite unicafe --template react
 $ bunx create-vite anecdotes --template react
 ```
+
+---
+## Part 2
+
+Creating one app in TS for exercise:
+```
+$ bunx create-vite courseinfo_ts --template react-ts
+$ bunx create-vite phonebook --template react
+$ bunx create-vite phonebook_ts --template react-ts
+```
+
+Add `json-server` to **myapp_2** app into devDependencies section:
+```
+$ cd part02/myapp_2
+$ bun install --dev json-server
+$ bunx json-server --port 3001 --watch db.json
+```
+
+Installing **axios** library to project:
+```
+$ bun install axios
+```
+
+Modify **package.json** file to add this statement into **scripts** section:
+```
+  "server": "bunx json-server --port 3001 --watch db.json"
+```
+
+Then we can use it by running:
+```
+$ bun run server
+```
+Creating app in TS for exercise:
+```
+$ bunx create-vite countriesinfo_ts --template react-ts
+$ cd countriesinfo_ts 
+$ bun install && bun install axios
+$ export VITE_SECRET_KEY="123456789" && bun run dev
+```
+
 ---
 ## Part 3
 ---
@@ -98,4 +137,4 @@ $ bunx create-vite anecdotes --template react
 ---
 ## Part 13
 ---
-Submissions made by William Arcaya C. @2023
+Submissions made by William Arcaya C. for 2023-2024

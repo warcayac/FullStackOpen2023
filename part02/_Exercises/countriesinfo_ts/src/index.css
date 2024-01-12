@@ -1,0 +1,22 @@
+.imgContainer {
+  max-width: 200px;
+  max-height: 200px;
+  overflow: hidden;
+  padding: 4px;
+}
+
+.imgContainer .imgFlag {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  border: 1px solid #000;
+}
+
+.search {
+  width: 300px;
+}
+
+.country {
+  color: chocolate;
+}
