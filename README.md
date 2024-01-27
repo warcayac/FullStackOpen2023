@@ -4,8 +4,8 @@ https://fullstackopen.com/en/
 
 - [x] Part 0: Fundamentals of Web apps
 - [x] Part 1: Introduction to React
-- [ ] Part 2: Communicating with server
-- [ ] Part 3: Programming a server with NodeJS and Express
+- [x] Part 2: Communicating with server
+- [x] Part 3: Programming a server with NodeJS and Express
 - [ ] Part 4: Testing Express servers, user administration
 - [ ] Part 5: Testing React apps
 - [ ] Part 6: Advanced state management
@@ -106,7 +106,7 @@ Then we can use it by running:
 ```
 $ bun run server
 ```
-Creating app in TS for exercise:
+Creating React-Vite app in TS for exercise:
 ```
 $ bunx create-vite countriesinfo_ts --template react-ts
 $ cd countriesinfo_ts 
@@ -116,6 +116,53 @@ $ export VITE_SECRET_KEY="123456789" && bun run dev
 
 ---
 ## Part 3
+
+Create a simple server with **Bun.serve** for TS:
+```
+$ mkdir -p bun_server_1 && cd $_ && bun init -y
+$ bun --hot index.ts 
+```
+
+Create a simple server with **Elysia** for TS:
+```
+$ bun create elysia bun_server_2
+$ bun run dev
+```
+
+Create a simple server with **Elysia** for exercise:
+```
+$ bun create elysia phonebook_server
+$ bun add ansis
+$ bun run dev
+```
+This server was created separate with its own repository as requested by the exercise.
+
+There was a need to modify **tsconfig.json**:
+```
+  "target": "ES2022",
+  "lib": [],
+```
+
+To enable server manages CORS, install this plugin:
+```
+server> $ bun add @elysiajs/cors
+```
+
+and add these lines into `index.ts` file in server:
+```
+...
+import cors from "@elysiajs/cors";
+...
+  .use(cors({methods: '*'}))  
+...
+```
+
+> [!NOTE]
+> **Link to Notes server**: https://fso2023-notes-server.onrender.com
+> 
+> **Link to PhoneBook server**: https://fso2023-phonebook-server.onrender.com
+
+
 ---
 ## Part 4
 ---
@@ -137,4 +184,4 @@ $ export VITE_SECRET_KEY="123456789" && bun run dev
 ---
 ## Part 13
 ---
-Submissions made by William Arcaya C. for 2023-2024
+Submissions made by William Arcaya C. for [Full Stack Open](https://fullstackopen.com/en/) 2023-2024

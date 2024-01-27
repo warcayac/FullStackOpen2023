@@ -1,0 +1,11 @@
+export type TChangeInputEvent = React.ChangeEvent<HTMLInputElement>;
+export type TChangeInputFunction = (event: TChangeInputEvent) => void;
+
+export type TFormSubmitEvent = React.FormEvent<HTMLFormElement>;
+export type TFormSubmitFunction = (event: TFormSubmitEvent) => void;
+
+export type TMouseButtonEvent = React.MouseEvent<HTMLButtonElement>;
+export type TMouseButtonFunction = (event: TMouseButtonEvent) => void;
+
+export type TJMap = Record<string, unknown>;
+export type TJMapList = Array<TJMap>;

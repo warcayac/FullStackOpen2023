@@ -1,0 +1,48 @@
+{
+  "compilerOptions": {
+    /* Language and Environment */
+    "lib": ["ESNext"],
+    "target": "ESNext",
+    "moduleDetection": "force",
+    "jsx": "react-jsx",
+
+    /* Modules */
+    "module": "ESNext",
+    "rootDir": "./src",
+    "baseUrl": "./",
+    "paths": { 
+      "@/*": ["src/*"]
+    },
+    "types": [
+      "bun-types"
+    ],
+    "moduleResolution": "bundler",
+    "allowImportingTsExtensions": true,
+
+    /* Emit */
+    "noEmit": true,
+    "outDir": "./dist",
+    "downlevelIteration": true,
+
+    /* JavaScript Support */
+    "allowJs": true,
+
+    /* Projects */
+    "composite": true,
+
+    /* Interop Constraints */
+    "verbatimModuleSyntax": true,
+    "forceConsistentCasingInFileNames": true,
+    "allowSyntheticDefaultImports": true,
+
+    /* Type Checking */
+    "strict": true,
+    "noFallthroughCasesInSwitch": true,
+
+    /* Completeness */
+    "skipLibCheck": true
+  },
+  "include": [
+    "src/**/*.ts"
+  ]
+}

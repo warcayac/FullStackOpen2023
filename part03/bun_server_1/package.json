@@ -1,0 +1,14 @@
+{
+  "name": "bun_server_1",
+  "module": "index.ts",
+  "type": "module",
+  "scripts": {
+    "server": "bun --hot index.ts"
+  },
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  }
+}
